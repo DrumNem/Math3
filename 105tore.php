@@ -1,0 +1,60 @@
+#!/usr/bin/php
+<?php
+
+//include '';
+
+// check les options 
+
+if (count($argv) == 8) 
+{
+	if ($argv[1] == 1)
+	{
+		if (is_numeric($argv[2]) && is_numeric($argv[3]) && is_numeric($argv[4]) &&
+			is_numeric($argv[5]) && is_numeric($argv[6]) && is_numeric($argv[7])) 
+		{
+			;
+		}
+		else
+		{
+			echo "One of these arguments : ".$argv[2]." ".$argv[3]." ".$argv[4]." ".$argv[5]." ".$argv[6]." ".$argv[7]." isn't a number !!\n";
+			exit(1);
+		}
+	}
+	else if ($argv[1] == 2)
+	{
+		if (is_numeric($argv[2]) && is_numeric($argv[3]) && is_numeric($argv[4]) &&
+			is_numeric($argv[5]) && is_numeric($argv[6]) && is_numeric($argv[7]))
+		{
+			;	
+		}
+		else
+		{
+			echo "One of these arguments : ".$argv[2]." ".$argv[3]." ".$argv[4]." ".$argv[5]." ".$argv[6]." ".$argv[7]." isn't a number !!\n";
+			exit(2);
+		}
+	}
+	else if ($argv[1] == 3)
+	{
+		if (is_numeric($argv[2]) && is_numeric($argv[3]) && is_numeric($argv[4]) &&
+			is_numeric($argv[5]) && is_numeric($argv[6]) && is_numeric($argv[7]))
+		{
+			;
+		}
+			else
+		{
+			echo "One of these arguments : ".$argv[2]." ".$argv[3]." ".$argv[4]." ".$argv[5]." ".$argv[6]." ".$argv[7]." isn't a number !!\n";
+			exit(4);
+		}
+	}
+	else
+	{
+		echo "Invalid option : ".$argv[1].", you can only choose:\n1-Méthode de la bissection\n2-Méthode de Newton\n3-Méthode de la sécante\n";
+		exit(5);
+	}
+}
+else
+{
+	echo "Usage : {./105tore} {option number} {a0} {a1} {a2} {a3} {a4} {n: float number required}.\n";
+	exit(0);
+}
+?>
