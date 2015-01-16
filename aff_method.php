@@ -1,19 +1,27 @@
 <?php
 
+// affichage de l'équation de début
+
 function print_equation($a, $b, $c, $d, $e)
 {
 	echo "(".$a."*x⁴) + (".$b."*x³) + (".$c."*x²) + (".$d."*x) + (".$e.") = 0\n";
 }
+
+// resolution de l'équation du quatrième degré
 
 function res_equa_4($a, $b, $c, $d, $e, $x)
 {
 	return (($a * pow($x, 4)) + ($b * pow($x, 3)) + ($c * pow($x, 2)) + ($d * $x) + $e);
 }
 
+// calcul la dérivé du x passé en paramètre
+
 function derivative($a, $b, $c, $d, $x)
 {
 	return ((4 * $a) * pow($x, 3) + (3 * $b) * pow($x, 2) + (2 * $c) * $x + $d);
 }
+
+// affichage de la méthode de la bissection
 
 function method_bissection($a, $b, $c, $d, $e, $n)
 {
@@ -42,6 +50,8 @@ function method_bissection($a, $b, $c, $d, $e, $n)
 	$res = res_equa_4($a, $b, $c, $d, $e, $xm);
 	echo "f(x) = ".number_format($res, 21)."\n";
 }
+
+// affichage de la méthode de Newton
 
 function method_Newton($a, $b, $c, $d, $e, $n)
 {
@@ -77,6 +87,8 @@ function method_Newton($a, $b, $c, $d, $e, $n)
 	}
 	echo "f(x) = ".number_format($f_xn, 21)."\n";
 }
+
+// affichage de la méthode de la sécante
 
 function method_secante($a, $b, $c, $d, $e, $n)
 {
