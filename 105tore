@@ -1,9 +1,9 @@
 #!/usr/bin/php
 <?php
 
-//include '';
+include 'aff_method.php';
 
-// check les options 
+// check les options et les arguments et les envoie aux fonctions de calcul
 
 if (count($argv) == 8) 
 {
@@ -12,7 +12,7 @@ if (count($argv) == 8)
 		if (is_numeric($argv[2]) && is_numeric($argv[3]) && is_numeric($argv[4]) &&
 			is_numeric($argv[5]) && is_numeric($argv[6]) && is_numeric($argv[7])) 
 		{
-			;
+			method_bissection($argv[6], $argv[5], $argv[4], $argv[3], $argv[2], $argv[7]);
 		}
 		else
 		{
@@ -25,7 +25,7 @@ if (count($argv) == 8)
 		if (is_numeric($argv[2]) && is_numeric($argv[3]) && is_numeric($argv[4]) &&
 			is_numeric($argv[5]) && is_numeric($argv[6]) && is_numeric($argv[7]))
 		{
-			;	
+			method_Newton($argv[6], $argv[5], $argv[4], $argv[3], $argv[2], $argv[7]);	
 		}
 		else
 		{
@@ -38,7 +38,7 @@ if (count($argv) == 8)
 		if (is_numeric($argv[2]) && is_numeric($argv[3]) && is_numeric($argv[4]) &&
 			is_numeric($argv[5]) && is_numeric($argv[6]) && is_numeric($argv[7]))
 		{
-			;
+			method_secante($argv[6], $argv[5], $argv[4], $argv[3], $argv[2], $argv[7]);
 		}
 			else
 		{
